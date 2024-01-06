@@ -1,0 +1,25 @@
+---
+interface Props {
+  description: string;
+  title: string;
+}
+
+const { description, title } = Astro.props;
+
+---
+
+<!doctype html>
+<html >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+   
+    <meta name="robots" content="nofollow, noindex" />
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-background text-text">
+    <slot class=""/>
+  </body>
+</html>
